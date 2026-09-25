@@ -3,6 +3,7 @@
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Souveniria</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display&display=swap" rel="stylesheet">
@@ -22,17 +23,26 @@
       color: #4A3527;
     }
 
-    /* ----- SECTION HERO (haut de page, comme avant) ----- */
+    /* ----- SECTION HERO : texte à gauche, collage à droite ----- */
     .hero {
-      text-align: center;
-      padding: 80px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      align-items: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .hero-texte {
+      text-align: left;
     }
 
     .hero h1 {
       font-family: 'Lobster', cursive;
       color: #E07A28;
       font-size: 60px;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
     }
 
     .hero p {
@@ -40,6 +50,28 @@
       color: #6B4A34;
       font-size: 20px;
       font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Sur téléphone : texte au-dessus, photos en dessous */
+    @media (max-width: 700px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 20px;
+      }
+      .hero-texte {
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 48px;
+      }
     }
 
     /* ----- SECTION CONCEPT ----- */
@@ -92,8 +124,11 @@
 
   <!-- Section d'accueil -->
   <section class="hero">
-    <h1>Souveniria</h1>
-    <p>Le journal qui rapproche les familles</p>
+    <div class="hero-texte">
+      <h1>Souveniria</h1>
+      <p>Le journal qui rapproche les familles et les grands-parents</p>
+    </div>
+    <img src="collage.png" alt="Grands-parents lisant leur journal Souveniria en famille">
   </section>
 
   <!-- Section concept -->
