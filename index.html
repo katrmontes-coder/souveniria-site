@@ -23,26 +23,17 @@
       color: #4A3527;
     }
 
-    /* ----- SECTION HERO : photo, titre au milieu, photo ----- */
+    /* ----- SECTION HERO ----- */
     .hero {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr 1fr;
-      align-items: center;
-      gap: 30px;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 50px 30px;
-    }
-
-    .hero-texte {
       text-align: center;
+      padding: 80px 20px 60px;
     }
 
     .hero h1 {
       font-family: 'Lobster', cursive;
       color: #E07A28;
       font-size: 60px;
-      margin: 0 0 10px;
+      margin-bottom: 10px;
     }
 
     .hero p {
@@ -51,28 +42,6 @@
       font-size: 20px;
       font-weight: bold;
       line-height: 1.4;
-    }
-
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Sur téléphone : titre en haut, les deux photos côte à côte en dessous */
-    @media (max-width: 700px) {
-      .hero {
-        grid-template-columns: 1fr 1fr;
-        padding: 40px 20px;
-        gap: 15px;
-      }
-      .hero-texte {
-        grid-column: 1 / 3;
-        grid-row: 1;
-      }
-      .hero h1 {
-        font-size: 48px;
-      }
     }
 
     /* ----- SECTION CONCEPT ----- */
@@ -125,11 +94,9 @@
 
   <!-- Section d'accueil -->
   <section class="hero">
-    <img src="collage-gauche.png" alt="Grands-parents lisant leur journal Souveniria entre amis">
-    <div class="hero-texte">
-      <h1>Souveniria</h1>
-      <p>Le journal qui rapproche les familles <span style="white-space: nowrap;">et les grands-parents</span></p>
-    </div>
+    <h1>Souveniria</h1>
+    <p>Le journal qui rapproche les familles <span style="white-space: nowrap;">et les grands-parents</span></p>
+  </section>
 
   <!-- Section concept -->
   <section class="concept">
