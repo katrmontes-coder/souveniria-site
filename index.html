@@ -23,19 +23,19 @@
       color: #4A3527;
     }
 
-    /* ----- SECTION HERO : texte à gauche, collage à droite ----- */
+    /* ----- SECTION HERO : photo, titre au milieu, photo ----- */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.4fr 1fr;
       align-items: center;
-      gap: 40px;
-      max-width: 1200px;
+      gap: 30px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 50px 30px;
     }
 
     .hero-texte {
-      text-align: left;
+      text-align: center;
     }
 
     .hero h1 {
@@ -59,15 +59,16 @@
       display: block;
     }
 
-    /* Sur téléphone : texte au-dessus, photos en dessous */
+    /* Sur téléphone : titre en haut, les deux photos côte à côte en dessous */
     @media (max-width: 700px) {
       .hero {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         padding: 40px 20px;
-        gap: 20px;
+        gap: 15px;
       }
       .hero-texte {
-        text-align: center;
+        grid-column: 1 / 3;
+        grid-row: 1;
       }
       .hero h1 {
         font-size: 48px;
@@ -124,11 +125,12 @@
 
   <!-- Section d'accueil -->
   <section class="hero">
+    <img src="collage-gauche.png" alt="Grands-parents lisant leur journal Souveniria entre amis">
     <div class="hero-texte">
       <h1>Souveniria</h1>
-     <p>Le journal qui rapproche les familles <span style="white-space: nowrap;">et les grands-parents</span></p>
+      <p>Le journal qui rapproche les familles <span style="white-space: nowrap;">et les grands-parents</span></p>
     </div>
-    <img src="collage.png" alt="Grands-parents lisant leur journal Souveniria en famille">
+    <img src="collage-droite.png" alt="Une grand-mère et sa petite-fille partageant des souvenirs">
   </section>
 
   <!-- Section concept -->
