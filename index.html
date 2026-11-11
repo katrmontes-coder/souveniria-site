@@ -321,12 +321,36 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:980px){.liens{gap:18px}.liens a{font-size:14px}}
 @media (max-width:820px){.nav-b{display:none}.mburger{display:flex}}
 
+
+/* Haut de page téléphone : ancienne mise en page, nouveaux textes */
+.mheroB{display:none}
+@media (max-width:820px){
+.hero{display:none!important}
+.mheroB{display:block;position:relative;background:#3F2A20;overflow:hidden;text-align:center}
+.mB-fond{position:absolute;left:0;top:0;width:100%;height:640px;object-fit:cover;object-position:22% 30%;filter:blur(3px) saturate(.9);transform:scale(1.06);z-index:0}
+.mheroB::after{content:"";position:absolute;left:0;right:0;top:0;height:660px;z-index:0;background:linear-gradient(180deg,rgba(48,27,20,.86) 0%,rgba(55,32,23,.78) 55%,rgba(59,34,25,.95) 100%);pointer-events:none}
+.mB-txt{position:relative;z-index:2;padding:26px 22px 0;display:flex;flex-direction:column;align-items:center}
+.mB-kick{margin:0;font-family:'Quicksand',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:11.5px;line-height:1.6;color:#F3E3D8}
+.mB-trait{display:block;width:30px;height:2px;background:#C9566E;border-radius:2px;margin:10px 0 12px}
+.mheroB h1{margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:500;color:#fff;font-size:clamp(1.85rem,8.6vw,2.1rem);line-height:1.08}
+.mB-souligne{display:block;width:66%;max-width:250px;height:12px;margin:4px auto 0}
+.mB-desc{margin:12px 0 0;color:#F7EEE6;font-size:15.5px;line-height:1.5}
+.mB-btn{position:relative;z-index:3;margin-top:18px;width:100%;min-height:52px;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--bx);color:#fff!important;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.mB-lien{position:relative;z-index:3;margin-top:6px;display:inline-flex;align-items:center;gap:6px;min-height:44px;color:#fff!important;font-weight:600;font-size:14.5px;text-decoration:underline;text-underline-offset:4px}
+.mB-btn svg,.mB-lien svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mB-photo{position:relative;z-index:1;margin-top:-56px}
+.mB-photo::before{content:"";position:absolute;inset:0 0 auto 0;height:34%;z-index:1;background:linear-gradient(180deg,rgba(59,34,25,.95) 0%,rgba(59,34,25,.5) 45%,rgba(59,34,25,0) 100%)}
+.mB-photo img{display:block;width:100%;height:380px;object-fit:cover;object-position:72% 100%}
+.atouts{position:relative;z-index:2;margin-top:-30px;background:var(--creme);border-radius:26px 26px 0 0;padding-top:14px!important}
+}
+@media (max-width:350px){.mB-btn{font-size:15px;padding:12px 14px}.mB-kick{letter-spacing:.14em}}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap nw"><a class="logo" href="#">Souveniria</a><nav class="liens" aria-label="Menu principal"><a href="#journal">Le journal</a><a href="#comment">Comment ça marche ?</a><a href="#tarifs">Tarifs</a><a href="#questions">FAQ</a></nav><span class="nav-b"><a class="nav-l" href="https://app.souveniria.ch">Se connecter</a><a class="btn btn-s" href="https://app.souveniria.ch">Créer le journal</a></span><button type="button" class="mburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button></div>
 <nav class="mmenu" id="mmenu" aria-label="Menu" hidden><a href="#journal">Le journal</a><a href="#comment">Comment ça marche ?</a><a href="#tarifs">Tarifs</a><a href="#questions">FAQ</a><a href="https://app.souveniria.ch">Se connecter</a></nav></header>
 <section class="hero"><div class="hero-img" role="img" aria-label="Une dame feuillette son journal Souveniria devant le lac Léman"></div><div class="wrap hw"><div class="hero-txt"><span class="k">Le journal familial adapté aux seniors</span><h1>Vos nouvelles, leur plus beau<br class="hbr"> rendez‑vous du mois.</h1><p>Chaque mois, partagez vos photos et vos messages dans un véritable journal familial imprimé, à enrichir selon vos envies.</p><a class="btn" href="https://app.souveniria.ch">Créer le journal de mon proche<span aria-hidden="true" style="margin-left:14px">→</span></a></div></div></section>
+<section class="mheroB"><img class="mB-fond" src="hero-famille.jpg" alt="" aria-hidden="true"><div class="mB-txt"><p class="mB-kick">Le journal familial<br>adapté aux seniors</p><span class="mB-trait" aria-hidden="true"></span><h1>Vos nouvelles, leur plus beau rendez‑vous du mois.</h1><svg class="mB-souligne" viewBox="0 0 240 12" aria-hidden="true"><path d="M3 8 C 70 2, 170 1, 237 6" fill="none" stroke="#C9566E" stroke-width="2.6" stroke-linecap="round"/></svg><p class="mB-desc">Chaque mois, partagez vos photos et vos messages dans un véritable journal familial imprimé, à enrichir selon vos envies.</p><a class="mB-btn" href="https://app.souveniria.ch">Créer le journal de mon proche<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="mB-lien" href="#tarifs">Découvrir nos tarifs<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="mB-photo"><img src="hero-famille.jpg" alt="Une dame lit son journal Souveniria près d’une fenêtre donnant sur le lac" width="1024" height="1536"></div></section>
 <div class="atouts"><div class="wrap aw"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A91D42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>12 pages personnalisées</span><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A91D42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18l5-12 5 12M5.8 14h6.4M14 18l3.5-8 3.5 8M15 16h5"/></svg>Grandes lettres, faciles à lire</span><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A91D42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/></svg>Aucune tablette, juste du papier</span></div><div class="wrap ch"><span class="chf"><svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#D52B1E"/><path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z" fill="#fff"/></svg>Une entreprise suisse</span></div></div>
 <main>
 <section class="dj" id="journal" aria-labelledby="dj-titre"><div class="dj-fx" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="halo"></i></div>
