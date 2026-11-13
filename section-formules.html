@@ -1,0 +1,120 @@
+<!-- ===== DÉBUT SECTION NOS FORMULES ===== -->
+<style>
+  .sv-formules { background: #A91D42; padding: 64px 20px; text-align: center; font-family: 'Quicksand', sans-serif; scroll-margin-top: 80px; }
+  .sv-formules * { box-sizing: border-box; }
+  .sv-surtitre { margin: 0; font-size: 13px; letter-spacing: 4px; color: #FBE8E5; }
+  .sv-titre { margin: 12px 0 10px; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 34px; color: #fff; }
+  .sv-soustitre { margin: 0 auto 36px; max-width: 520px; font-size: 17px; line-height: 1.5; color: #fff; }
+
+  .sv-cartes { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 900px; margin: 0 auto; align-items: start; }
+  .sv-carte { background: #fff; border-radius: 20px; overflow: hidden; text-align: left; }
+  .sv-carte-abo { border: 2px solid #FBE8E5; }
+
+  .sv-bandeau { background: #FBE8E5; padding: 18px 12px 20px; text-align: center; }
+  .sv-pastille { display: inline-block; background: #A91D42; color: #fff; font-weight: 500; border-radius: 30px; }
+  .sv-pastille-haut { font-size: 12px; letter-spacing: 2px; padding: 6px 16px; }
+  .sv-pastille-bas { font-size: 14px; padding: 7px 18px; margin-top: 14px; }
+  .sv-offre { display: flex; align-items: center; justify-content: center; margin-top: 12px; }
+  .sv-cadeau { width: 62px; height: 62px; margin-right: 6px; flex-shrink: 0; }
+  .sv-quinze { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 62px; line-height: 1; color: #A91D42; margin-right: 14px; }
+  .sv-familles { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 18px; line-height: 1.1; color: #A91D42; text-align: left; }
+  .sv-traits { width: 22px; height: 44px; margin-left: 6px; flex-shrink: 0; }
+
+  .sv-contenu { padding: 22px 22px 26px; }
+  .sv-label { margin: 0; font-size: 12px; letter-spacing: 2px; font-weight: 500; color: #A91D42; }
+  .sv-nom { margin: 6px 0 4px; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 26px; color: #3b2a24; }
+  .sv-prix { display: flex; align-items: baseline; gap: 8px; }
+  .sv-montant { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 52px; color: #A91D42; }
+  .sv-montant-unite { color: #3b2a24; }
+  .sv-devise { font-size: 15px; color: #6b5a52; }
+  .sv-detail { margin: 2px 0 16px; font-size: 14px; color: #6b5a52; }
+  .sv-liste { list-style: none; margin: 0 0 22px; padding: 0; font-size: 15px; line-height: 1.5; color: #3b2a24; }
+  .sv-liste li { position: relative; padding-left: 26px; margin-bottom: 8px; }
+  .sv-liste li::before { content: "✓"; position: absolute; left: 0; color: #A91D42; font-weight: 700; }
+  .sv-bouton { display: block; text-align: center; background: #A91D42; color: #fff; text-decoration: none; font-weight: 500; padding: 14px; border-radius: 30px; }
+  .sv-bouton-secondaire { background: #fff; color: #A91D42; border: 2px solid #A91D42; }
+
+  @media (min-width: 768px) {
+    .sv-titre { font-size: 44px; }
+    .sv-cartes { grid-template-columns: 1fr 1fr; gap: 28px; }
+    .sv-quinze { font-size: 74px; }
+    .sv-familles { font-size: 20px; }
+    .sv-cadeau { width: 72px; height: 72px; }
+  }
+</style>
+
+<section class="sv-formules" id="formules">
+  <p class="sv-surtitre">NOS FORMULES</p>
+  <h2 class="sv-titre">Choisissez votre formule.</h2>
+  <p class="sv-soustitre">Un seul prix, tout compris. Aucun frais supplémentaire.</p>
+
+  <div class="sv-cartes">
+
+    <!-- Carte abonnement avec bandeau offre de lancement -->
+    <div class="sv-carte sv-carte-abo">
+      <div class="sv-bandeau">
+        <span class="sv-pastille sv-pastille-haut">OFFRE DE LANCEMENT</span>
+        <div class="sv-offre">
+          <svg class="sv-cadeau" viewBox="0 0 62 62" aria-hidden="true">
+            <line x1="6" y1="12" x2="11" y2="19" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="1" y1="28" x2="9" y2="29" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="16" y1="4" x2="18" y2="12" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <g transform="rotate(-14 34 42)">
+              <rect x="16" y="36" width="36" height="22" rx="3" fill="#FCF8F3" stroke="#e6d6cc" stroke-width="1"/>
+              <rect x="14" y="28" width="40" height="10" rx="2" fill="#ffffff" stroke="#e6d6cc" stroke-width="1"/>
+              <rect x="31" y="28" width="6" height="30" fill="#A91D42"/>
+              <path d="M34 28 C27 16 17 20 23 26 C26 29 31 28 34 28 Z" fill="#A91D42"/>
+              <path d="M34 28 C41 16 51 20 45 26 C42 29 37 28 34 28 Z" fill="#A91D42"/>
+              <circle cx="34" cy="28" r="2.5" fill="#7d1430"/>
+            </g>
+          </svg>
+          <span class="sv-quinze">15</span>
+          <span class="sv-familles">premières<br>familles<br>seulement !</span>
+          <svg class="sv-traits" viewBox="0 0 22 44" aria-hidden="true">
+            <line x1="4" y1="8" x2="14" y2="2" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6" y1="22" x2="18" y2="22" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="4" y1="36" x2="14" y2="42" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="sv-pastille sv-pastille-bas">Tarif privilégié pendant 12 mois</span>
+      </div>
+
+      <div class="sv-contenu">
+        <p class="sv-label">AVEC ABONNEMENT</p>
+        <h3 class="sv-nom">Abonnement mensuel</h3>
+        <div class="sv-prix">
+          <span class="sv-montant">20.–</span>
+          <span class="sv-devise">CHF / mois</span>
+        </div>
+        <p class="sv-detail">pendant 12 mois, puis 22.– CHF / mois</p>
+        <ul class="sv-liste">
+          <li>Un journal imprimé chaque mois, à son nom</li>
+          <li>Toute la famille participe avec un seul code</li>
+          <li>Résiliable à tout moment</li>
+        </ul>
+        <a class="sv-bouton" href="https://app.souveniria.ch">Je m'abonne</a>
+      </div>
+    </div>
+
+    <!-- Carte journal à l'unité -->
+    <div class="sv-carte">
+      <div class="sv-contenu">
+        <p class="sv-label">SANS ENGAGEMENT</p>
+        <h3 class="sv-nom">Journal à l'unité</h3>
+        <div class="sv-prix">
+          <span class="sv-montant sv-montant-unite">25.–</span>
+          <span class="sv-devise">CHF / journal</span>
+        </div>
+        <p class="sv-detail">Idéal pour offrir ou pour essayer</p>
+        <ul class="sv-liste">
+          <li>Un seul journal, sans abonnement</li>
+          <li>Toute la famille participe avec un seul code</li>
+          <li>Les solutions des jeux dans le même journal</li>
+        </ul>
+        <a class="sv-bouton sv-bouton-secondaire" href="https://app.souveniria.ch">Commander un journal</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== FIN SECTION NOS FORMULES ===== -->
