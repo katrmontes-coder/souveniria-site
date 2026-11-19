@@ -568,6 +568,7 @@ var t;r.addEventListener('scroll',function(){cancelAnimationFrame(t);t=requestAn
   .sv-par-mois { font-size: 15px; line-height: 1.2; color: #6b5a52; text-align: left; }
   .sv-familles { margin: 8px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 20px; line-height: 1.25; color: #A91D42; }
   .sv-traits { width: 22px; height: 44px; margin-left: 6px; flex-shrink: 0; }
+  .sv-traits-g { transform: scaleX(-1); margin-left: 0; margin-right: 6px; }
 
   .sv-contenu { padding: 22px 22px 26px; flex: 1; display: flex; flex-direction: column; }
   .sv-label { margin: 0; font-size: 12px; letter-spacing: 2px; font-weight: 500; color: #A91D42; }
@@ -601,10 +602,12 @@ var t;r.addEventListener('scroll',function(){cancelAnimationFrame(t);t=requestAn
     <div class="sv-bandeau">
         <span class="sv-pastille sv-pastille-haut">OFFRE DE LANCEMENT</span>
         <div class="sv-offre">
+          <svg class="sv-traits sv-traits-g" viewBox="0 0 22 44" aria-hidden="true">
+            <line x1="4" y1="8" x2="14" y2="2" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6" y1="22" x2="18" y2="22" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="4" y1="36" x2="14" y2="42" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
           <svg class="sv-cadeau" viewBox="0 0 62 62" aria-hidden="true">
-            <line x1="6" y1="12" x2="11" y2="19" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="1" y1="28" x2="9" y2="29" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="16" y1="4" x2="18" y2="12" stroke="#C99A3E" stroke-width="2.5" stroke-linecap="round"/>
             <g transform="rotate(-14 34 42)">
               <rect x="16" y="36" width="36" height="22" rx="3" fill="#FCF8F3" stroke="#e6d6cc" stroke-width="1"/>
               <rect x="14" y="28" width="40" height="10" rx="2" fill="#ffffff" stroke="#e6d6cc" stroke-width="1"/>
