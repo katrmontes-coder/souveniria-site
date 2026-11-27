@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://souveniria.ch/sitemap.xml
